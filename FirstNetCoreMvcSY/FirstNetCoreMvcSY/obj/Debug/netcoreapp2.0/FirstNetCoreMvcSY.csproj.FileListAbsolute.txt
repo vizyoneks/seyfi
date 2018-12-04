@@ -1,0 +1,11 @@
+C:\Users\seyfi\Documents\Visual Studio 2017\Projects\FirstNetCoreMvcSY\FirstNetCoreMvcSY\bin\Debug\netcoreapp2.0\FirstNetCoreMvcSY.deps.json
+C:\Users\seyfi\Documents\Visual Studio 2017\Projects\FirstNetCoreMvcSY\FirstNetCoreMvcSY\bin\Debug\netcoreapp2.0\FirstNetCoreMvcSY.runtimeconfig.json
+C:\Users\seyfi\Documents\Visual Studio 2017\Projects\FirstNetCoreMvcSY\FirstNetCoreMvcSY\bin\Debug\netcoreapp2.0\FirstNetCoreMvcSY.runtimeconfig.dev.json
+C:\Users\seyfi\Documents\Visual Studio 2017\Projects\FirstNetCoreMvcSY\FirstNetCoreMvcSY\bin\Debug\netcoreapp2.0\FirstNetCoreMvcSY.dll
+C:\Users\seyfi\Documents\Visual Studio 2017\Projects\FirstNetCoreMvcSY\FirstNetCoreMvcSY\bin\Debug\netcoreapp2.0\FirstNetCoreMvcSY.pdb
+C:\Users\seyfi\Documents\Visual Studio 2017\Projects\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.0\FirstNetCoreMvcSY.csprojAssemblyReference.cache
+C:\Users\seyfi\Documents\Visual Studio 2017\Projects\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.0\FirstNetCoreMvcSY.csproj.CoreCompileInputs.cache
+C:\Users\seyfi\Documents\Visual Studio 2017\Projects\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.0\FirstNetCoreMvcSY.AssemblyInfoInputs.cache
+C:\Users\seyfi\Documents\Visual Studio 2017\Projects\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.0\FirstNetCoreMvcSY.AssemblyInfo.cs
+C:\Users\seyfi\Documents\Visual Studio 2017\Projects\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.0\FirstNetCoreMvcSY.dll
+C:\Users\seyfi\Documents\Visual Studio 2017\Projects\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.0\FirstNetCoreMvcSY.pdb
