@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using FirstNetCoreMvcSY.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.SqlServer;
 
 namespace FirstNetCoreMvcSY
 {
@@ -18,10 +21,12 @@ namespace FirstNetCoreMvcSY
         }
 
         public IConfiguration Configuration { get; }
-
+        
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connectionStringBuilder = new SqlConnectionStringBuilder {DataSource = Configuration.GetConnectionString("ders") };
+            services.AddEntityFrameworkSqlServer().AddDbContext<FirstNetCoreMvcSY.Models.CoreDb>(options=>options.UseSqlServer(Configuration.GetConnectionString("ders")));
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddMvc();
         }

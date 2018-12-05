@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using FirstNetCoreMvcSY.Repositories;
+﻿using FirstNetCoreMvcSY.Repositories;
 using FirstNetCoreMvcSY.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace FirstNetCoreMvcSY.Controllers
 {
@@ -24,7 +22,10 @@ namespace FirstNetCoreMvcSY.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            return View();
+            var model = new ProductViewModel();
+            model.Products = productRepository.GetAll();
+            model.Brands = productRepository.GetBrands();
+            return View(model);
         }
 
         // GET: Product/Details/5
@@ -36,7 +37,7 @@ namespace FirstNetCoreMvcSY.Controllers
         // GET: Product/Create
         public ActionResult Create()
         {
-            return View(new ProductCreateViewModel());
+            return View(new ProductCreateViewModel() {Brands = productRepository.GetBrands() });
         }
 
         // POST: Product/Create

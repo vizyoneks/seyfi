@@ -1,4 +1,4 @@
-﻿@model IEnumerable<FirstNetCoreMvcSY.ViewModels.ProductViewModel>
+﻿@model FirstNetCoreMvcSY.ViewModels.ProductViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -12,19 +12,54 @@
 </p>
 <table class="table">
     <thead>
-        <tr>
+        <tr class="row">
+            <th>
+                <label asp-for="Products.FirstOrDefault().Id" class="control-label"></label>
+            </th>
+            <th>
+                <label asp-for="Products.FirstOrDefault().Name" class="control-label"></label>
+            </th>
+            <th>
+                <label asp-for="Products.FirstOrDefault().Price" class="control-label"></label>
+            </th>
+            <th>
+                <label asp-for="Products.FirstOrDefault().Balance" class="control-label"></label>
+            </th>
+            <th>
+                <label asp-for="Products.FirstOrDefault().ImagePath" class="control-label"></label>
+            </th>
+            <th>
+                <label asp-for="Products.FirstOrDefault().Brand" class="control-label"></label>
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Products)
+        {
+            <tr class="row">
+                <td class="col-sm-2">
+                    <input asp-for="@item.Id" class="form-control" disabled />
+                </td>
+                <td>
+                    <input asp-for="@item.Name" class="form-control" disabled />
+                </td>
+                <td>
+                    <input asp-for="@item.Price" class="form-control" disabled />
+                </td>
+                <td>
+                    <input asp-for="@item.Balance" class="form-control" disabled />
+                </td>
+                <td>
+                    <img src="~/images/@Url.Content(item.ImagePath)" width="60" height="60" />
+                </td>
+                <td>
+                    <select asp-for="@item.Brand" asp-items="Model.Brands" class="form-control" disabled></select>
+                </td>
+                <td>                    
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

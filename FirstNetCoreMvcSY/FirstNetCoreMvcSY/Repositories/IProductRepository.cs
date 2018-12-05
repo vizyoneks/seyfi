@@ -1,4 +1,5 @@
 ﻿using FirstNetCoreMvcSY.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace FirstNetCoreMvcSY.Repositories
         void Create(Product product);
 
         void Delete(int id);
-        
+
+        List<SelectListItem> GetBrands();
     }
 }
