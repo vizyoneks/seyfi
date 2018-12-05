@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{381ED3FD-55AA-49B8-A099-54EFE76E7595}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FirstNetCoreMvcSY/Views/Shared/_Layout.cshtml">
+    <Files>
+      <File FileName="FirstNetCoreMvcSY/Views/Shared/_Layout.cshtml" Line="37" Column="21" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.FirstNetCoreMvcSY PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
