@@ -11,65 +11,41 @@
     <a asp-action="Create">Yeni Ürün Ekle</a>
 </p>
 
-<table class="table">
+<table id="grid-basic" data-ajax="true" data-url="product/GetProduct" class="table table-condensed table-hover table-striped">
     <thead>
-        <tr class="row">
-            <th>
-                <label asp-for="Products.FirstOrDefault().Id" class="control-label"></label>
-            </th>
-            <th>
-                <label asp-for="Products.FirstOrDefault().Name" class="control-label"></label>
-            </th>
-            <th>
-                <label asp-for="Products.FirstOrDefault().Price" class="control-label"></label>
-            </th>
-            <th>
-                <label asp-for="Products.FirstOrDefault().Balance" class="control-label"></label>
-            </th>
-            <th>
-                <label asp-for="Products.FirstOrDefault().ImagePath" class="control-label"></label>
-            </th>
-            <th>
-                <label asp-for="Products.FirstOrDefault().Brand" class="control-label"></label>
-            </th>
-            <th></th>
+        <tr>
+            <th data-column-id="id" data-type="numeric">ID</th>
+            <th data-column-id="name">Ürün Adı</th>
+            <th data-column-id="price" data-type="numeric" >Fiyatı</th>
+            <th data-column-id="balance" data-type="numeric">Stok</th>
+            <th data-column-id="brand" data-formatter="brands" data-order="desc">Marka</th>
+            <th data-column-id="imagePath" data-formatter="image">Fotoğraf</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Products)
-        {
-            <tr class="row">
-                <td class="col-sm-2">
-                    <input asp-for="@item.Id" class="form-control" disabled />
-                </td>
-                <td>
-                    <input asp-for="@item.Name" class="form-control" disabled />
-                </td>
-                <td>
-                    <input asp-for="@item.Price" class="form-control" disabled />
-                </td>
-                <td>
-                    <input asp-for="@item.Balance" class="form-control" disabled />
-                </td>
-                <td>
-                    <img src="~/images/@Url.Content(item.ImagePath)" width="60" height="60" />
-                </td>
-                <td>
-                    <select asp-for="@item.Brand" asp-items="Model.Brands" class="form-control" disabled></select>
-                </td>
-                <td>                    
-                    <input id="btnDelete" class="btn-primary" type="button" data-prop="@item.Id" value="Sil" />
-                </td>
-            </tr>
-        }
+
     </tbody>
 </table>
 
 @section Scripts
     {
-    <script type="text/javascript">
+<script type="text/javascript">
 
-        var doDelete = function (id) {
+$("#grid-basic").bootgrid({
+    formatters: {
+        "image": function(column, row)
+        {
+            return "<image src='/images/"+ row.imagePath +"'>";
+        },
+        "brands": function(column,row)
+        {
+
+            return  '@Model.Brands.Find(q=>q.Value == "1").Text';
+        }
+    }
+});
+
+var doDelete = function (id) {
             var token = $('input[name="__RequestVerificationToken"]').val();
             var headers = {};
 
@@ -93,13 +69,20 @@
 
         $(document).ready(function () {
 
-            
+        $("#grid-basic").bootgrid();
 
-            $('#btnDelete').click(function onClick() {
+            $('.deleteButton').click(function onClick() {
                 var data = $('#btnDelete').attr('data-prop');
+                var $row = $(this).closest("tr"),       // Finds the closest row <tr>
+                $tds = $row.find("td:nth-child(0)");                // Finds all children <td> elements
+
+                $.each($tds, function() {               // Visits every single <td> element
+                    console.log($(this).text());        // Prints out the text within the <td>
+                });
+
                 $.confirm({
                     title: 'Onay',
-                    content: 'Sİlmek istediğinize emin misiniz ?',
+                    content: 'Silmek istediğinize emin misiniz ?',
                     type: 'red',
                     theme: 'dark',
                     typeAnimated: true,
@@ -118,7 +101,5 @@
                 });
 
             });
-        });
-
-    </script>
+        });</script>
 }

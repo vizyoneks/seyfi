@@ -1,0 +1,8 @@
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.1\FirstNetCoreMvcSY.csproj.CoreCompileInputs.cache
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.1\FirstNetCoreMvcSY.AssemblyInfoInputs.cache
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.1\FirstNetCoreMvcSY.AssemblyInfo.cs
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\bin\Debug\netcoreapp2.1\FirstNetCoreMvcSY.deps.json
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\bin\Debug\netcoreapp2.1\FirstNetCoreMvcSY.runtimeconfig.json
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\bin\Debug\netcoreapp2.1\FirstNetCoreMvcSY.runtimeconfig.dev.json
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\bin\Debug\netcoreapp2.1\FirstNetCoreMvcSY.dll
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.1\FirstNetCoreMvcSY.csprojAssemblyReference.cache

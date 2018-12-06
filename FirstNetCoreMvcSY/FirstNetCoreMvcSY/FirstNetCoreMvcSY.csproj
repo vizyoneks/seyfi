@@ -21,4 +21,10 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\js\jquery.bootgrid.fa.js" />
+    <Content Remove="wwwroot\js\jquery.bootgrid.min.css" />
+    <Content Remove="wwwroot\js\jquery.steps.js" />
+    <Content Remove="wwwroot\js\jquery.steps.min.js" />
+  </ItemGroup>
 </Project>

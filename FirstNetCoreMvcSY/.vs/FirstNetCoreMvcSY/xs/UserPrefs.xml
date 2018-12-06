@@ -1,7 +1,12 @@
 ﻿<Properties StartupConfiguration="{381ED3FD-55AA-49B8-A099-54EFE76E7595}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FirstNetCoreMvcSY/Views/Shared/_Layout.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FirstNetCoreMvcSY/Views/Product/Index.cshtml">
     <Files>
-      <File FileName="FirstNetCoreMvcSY/Views/Shared/_Layout.cshtml" Line="37" Column="21" />
+      <File FileName="FirstNetCoreMvcSY/Views/Shared/_Layout.cshtml" Line="60" Column="44" />
+      <File FileName="FirstNetCoreMvcSY/appsettings.Development.json" Line="3" Column="94" />
+      <File FileName="FirstNetCoreMvcSY/Views/Product/Index.cshtml" Line="43" Column="57" />
+      <File FileName="FirstNetCoreMvcSY/Controllers/ProductController.cs" Line="34" Column="66" />
+      <File FileName="FirstNetCoreMvcSY/ViewModels/ProductViewModel.cs" Line="12" Column="24" />
+      <File FileName="FirstNetCoreMvcSY/Models/Product.cs" Line="30" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.FirstNetCoreMvcSY PreferredExecutionTarget="MonoDevelop.Default" />

@@ -28,6 +28,12 @@ namespace FirstNetCoreMvcSY.Controllers
             return View(model);
         }
 
+        public ActionResult GetProduct()
+        {
+            var model = productRepository.GetAll();
+            return Json(new { Current=1,RowCount=model.Count,Rows = model });
+        }
+
         // GET: Product/Details/5
         public ActionResult Details(int id)
         {
