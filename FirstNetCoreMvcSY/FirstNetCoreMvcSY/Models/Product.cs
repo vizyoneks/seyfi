@@ -14,14 +14,19 @@ namespace FirstNetCoreMvcSY.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        [Display(Name="Ürün Adı")]
         public string Name { get; set; }
 
+        [Display(Name = "Ürün Fiyatı")]
         public decimal Price { get; set; }
 
+        [Display(Name = "Stok")]
         public int Balance { get; set; }
 
+        [Display(Name = "Ürün Resmi")]
         public string ImagePath { get; set; }
 
+        [Display(Name = "Marka")]
         public int Brand { get; set; }
     }
 }

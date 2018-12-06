@@ -68,7 +68,7 @@ namespace FirstNetCoreMvcSY.Controllers
                 }
                 
 
-                return RedirectToAction(nameof(Create));
+                return RedirectToAction(nameof(Index));
             }
             catch(Exception ex)
             {
@@ -107,13 +107,12 @@ namespace FirstNetCoreMvcSY.Controllers
 
         // POST: Product/Delete/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult DeleteWithConfirmation(int id)
         {
             try
             {
                 // TODO: Add delete logic here
-
+                productRepository.Delete(id);
                 return RedirectToAction(nameof(Index));
             }
             catch

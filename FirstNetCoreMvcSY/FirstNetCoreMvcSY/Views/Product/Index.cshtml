@@ -5,11 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Ürünler</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Yeni Ürün Ekle</a>
 </p>
+
 <table class="table">
     <thead>
         <tr class="row">
@@ -57,9 +58,67 @@
                     <select asp-for="@item.Brand" asp-items="Model.Brands" class="form-control" disabled></select>
                 </td>
                 <td>                    
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    <input id="btnDelete" class="btn-primary" type="button" data-prop="@item.Id" value="Sil" />
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+@section Scripts
+    {
+    <script type="text/javascript">
+
+        var doDelete = function (id) {
+            var token = $('input[name="__RequestVerificationToken"]').val();
+            var headers = {};
+
+            headers['__RequestVerificationToken'] = token;
+
+            $.ajax({
+                type: "POST",
+                url: "Product/DeleteWithConfirmation"+"/"+id,
+                success: function (d) {
+                    window.location = "Product";
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    // TODO: Show error
+                    $.alert({
+                        title: textStatus,
+                        content: xhr.responseText,
+                    });
+                }
+            });
+        }
+
+        $(document).ready(function () {
+
+            
+
+            $('#btnDelete').click(function onClick() {
+                var data = $('#btnDelete').attr('data-prop');
+                $.confirm({
+                    title: 'Onay',
+                    content: 'Sİlmek istediğinize emin misiniz ?',
+                    type: 'red',
+                    theme: 'dark',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Evet',
+                            btnClass: 'btn-red',
+                            action: function () {
+                                doDelete(data);
+                            }
+                        },
+                        close: {
+                            text:'Vazgeç'
+                        }
+                    }
+                });
+
+            });
+        });
+
+    </script>
+}
