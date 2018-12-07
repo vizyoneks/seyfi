@@ -1,7 +1,11 @@
-﻿@{
+﻿@model FirstNetCoreMvcSY.Models.Product
+@{
     ViewData["Title"] = "About";
 }
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
 <p>Use this area to provide additional information.</p>
+
+<label asp-for="Name" class="control-label">@Model.Name</label>
+<label asp-for="Price" class="control-label">@Model.Price</label>

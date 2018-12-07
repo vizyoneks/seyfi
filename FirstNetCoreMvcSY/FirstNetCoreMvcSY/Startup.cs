@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using FirstNetCoreMvcSY.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,6 +29,18 @@ namespace FirstNetCoreMvcSY
             var connectionStringBuilder = new SqlConnectionStringBuilder {DataSource = Configuration.GetConnectionString("ders") };
             services.AddEntityFrameworkSqlServer().AddDbContext<FirstNetCoreMvcSY.Models.CoreDb>(options=>options.UseSqlServer(Configuration.GetConnectionString("ders")));
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddSingleton<ICartRepository, CartRepository>();
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                // Set a short timeout for easy testing.
+                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.HttpOnly = true;
+            });
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             services.AddMvc();
         }
 
@@ -45,6 +58,7 @@ namespace FirstNetCoreMvcSY
             }
 
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

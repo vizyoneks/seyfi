@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using FirstNetCoreMvcSY.Models;
+using FirstNetCoreMvcSY.Extensions;
 
 namespace FirstNetCoreMvcSY.Controllers
 {
@@ -12,14 +13,15 @@ namespace FirstNetCoreMvcSY.Controllers
     {
         public IActionResult Index()
         {
+            var model = HttpContext.Session.Get<Product>("myProduct");
             return View();
         }
 
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
-            return View();
+            var model = HttpContext.Session.Get<Product>("myProduct");
+            return View(model);
         }
 
         public IActionResult Contact()

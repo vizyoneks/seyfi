@@ -1,4 +1,5 @@
-﻿using FirstNetCoreMvcSY.Repositories;
+﻿using FirstNetCoreMvcSY.Models;
+using FirstNetCoreMvcSY.Repositories;
 using FirstNetCoreMvcSY.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -6,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using FirstNetCoreMvcSY.Extensions;
+using System.Linq;
 
 namespace FirstNetCoreMvcSY.Controllers
 {
@@ -13,11 +16,13 @@ namespace FirstNetCoreMvcSY.Controllers
     {
         private readonly IHostingEnvironment environment;
         private readonly IProductRepository productRepository;
+        private readonly ICartRepository cartRepository;
 
-        public ProductController(IHostingEnvironment environment, IProductRepository productRepository)
+        public ProductController(IHostingEnvironment environment, IProductRepository productRepository,ICartRepository cartRepository)
         {
             this.environment = environment;
             this.productRepository = productRepository;
+            this.cartRepository = cartRepository;
         }
         // GET: Product
         public ActionResult Index()
@@ -30,7 +35,9 @@ namespace FirstNetCoreMvcSY.Controllers
 
         public ActionResult GetProduct()
         {
-            var model = productRepository.GetAll();
+            //var model = productRepository.GetAll();
+            var model = cartRepository.GetCart();
+            HttpContext.Session.Set<Product>("myProduct", model.FirstOrDefault());
             return Json(new { Current=1,RowCount=model.Count,Rows = model });
         }
 
@@ -67,6 +74,7 @@ namespace FirstNetCoreMvcSY.Controllers
                 try
                 {
                     productRepository.Create(model.Product);
+                    cartRepository.AddCart(model.Product);
                 }
                 catch (Exception ex)
                 {

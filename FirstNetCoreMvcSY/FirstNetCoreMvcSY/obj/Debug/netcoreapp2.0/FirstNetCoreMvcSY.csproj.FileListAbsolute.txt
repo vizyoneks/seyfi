@@ -31,3 +31,14 @@ C:/Users/seyfi/Source/Repos/seyfi/FirstNetCoreMvcSY/FirstNetCoreMvcSY/obj/Debug/
 C:/Users/seyfi/Source/Repos/seyfi/FirstNetCoreMvcSY/FirstNetCoreMvcSY/obj/Debug/netcoreapp2.0/FirstNetCoreMvcSY.AssemblyInfo.cs
 C:/Users/seyfi/Source/Repos/seyfi/FirstNetCoreMvcSY/FirstNetCoreMvcSY/obj/Debug/netcoreapp2.0/FirstNetCoreMvcSY.dll
 C:/Users/seyfi/Source/Repos/seyfi/FirstNetCoreMvcSY/FirstNetCoreMvcSY/obj/Debug/netcoreapp2.0/FirstNetCoreMvcSY.pdb
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\bin\Debug\netcoreapp2.0\FirstNetCoreMvcSY.deps.json
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\bin\Debug\netcoreapp2.0\FirstNetCoreMvcSY.runtimeconfig.json
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\bin\Debug\netcoreapp2.0\FirstNetCoreMvcSY.runtimeconfig.dev.json
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\bin\Debug\netcoreapp2.0\FirstNetCoreMvcSY.dll
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\bin\Debug\netcoreapp2.0\FirstNetCoreMvcSY.pdb
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.0\FirstNetCoreMvcSY.csprojAssemblyReference.cache
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.0\FirstNetCoreMvcSY.csproj.CoreCompileInputs.cache
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.0\FirstNetCoreMvcSY.AssemblyInfoInputs.cache
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.0\FirstNetCoreMvcSY.AssemblyInfo.cs
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.0\FirstNetCoreMvcSY.dll
+C:\Users\bilgea\Source\Repos\seyfi\FirstNetCoreMvcSY\FirstNetCoreMvcSY\obj\Debug\netcoreapp2.0\FirstNetCoreMvcSY.pdb
